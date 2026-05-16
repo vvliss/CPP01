@@ -7,10 +7,10 @@
 
 class HumanB {
     private:
-        Weapon* Weapon;
+        Weapon* weapon;
         std::string name;
     public:
-        HumanB(std::string name, Weapon*);
+        HumanB(std::string name);
         ~HumanB();
         void setWeapon(Weapon& weapon);
         std::string attack();
