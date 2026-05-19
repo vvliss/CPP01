@@ -4,7 +4,7 @@ CPP = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++17
 RM = rm -f
 
-SRCS = 
+SRCS = Harl.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
