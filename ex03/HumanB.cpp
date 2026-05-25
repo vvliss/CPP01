@@ -1,7 +1,7 @@
 #include "Weapon.hpp"
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : name(name) {
+HumanB::HumanB(std::string name) : name(name), weapon(nullptr) {
 
 }
 
@@ -14,5 +14,7 @@ void HumanB::setWeapon(Weapon& weapon) {
 }
 
 std::string HumanB::attack() {
-    return(this->name + " attacks with their " + (*this->weapon).getType());
+    if (this->weapon == nullptr)
+        return (this->name + " has no weapon!");
+    return(this->name + " attacks with their " + this->weapon->getType());
 }
